@@ -1,1 +1,3 @@
 export const API_KEY = 'MTA0NzM4';
+export const INCREMENT_CAT_COUNT = 'INCREMENT_CAT_COUNT';
+export const DECREMENT_CAT_COUNT = 'DECREMENT_CAT_COUNT';

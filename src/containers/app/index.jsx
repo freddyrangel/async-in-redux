@@ -1,7 +1,7 @@
 import './index.css';
 import React, { Component } from 'react';
-import Voting               from 'components/voting';
-import Counter              from 'components/counter';
+import Voting               from 'containers/voting';
+import Counter              from 'containers/counter';
 import logo                 from './assets/logo.svg';
 
 export default class App extends Component {

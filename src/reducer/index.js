@@ -1,6 +1,6 @@
-export default function reducer(state = {}, {type, payload}) {
-  switch (type) {
-    default:
-      return state;
-  }
-}
+import { combineReducers } from 'redux';
+import catCountReducer     from 'containers/counter/reducer';
+
+export default combineReducers({
+  catCount: catCountReducer
+});
