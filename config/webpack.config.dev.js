@@ -36,6 +36,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
+    modulesDirectories: [
+      nodeModulesPath,
+      srcPath
+    ]
   },
   resolveLoader: {
     root: nodeModulesPath,

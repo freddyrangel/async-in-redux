@@ -1,61 +1,33 @@
 import './index.css';
 import React, { Component } from 'react';
-import fetch                from 'isomorphic-fetch';
-import logo                 from './logo.svg';
-import { API_KEY }          from 'constants';
+import Voting               from 'components/voting';
+import Counter              from 'components/counter';
+import logo                 from './assets/logo.svg';
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { data: {} };
+    this.state = { showCounter: false };
   }
 
-  componentDidMount() {
-    this.fetchCatImage();
+  handleClick = () => {
+    this.setState({ showCounter: !this.state.showCounter });
   }
-
-  fetchCatImage = () => {
-    const params = { api_key: API_KEY };
-    fetch('http://thecatapi.com/api/images/get', params)
-      .then((data) => this.setState({ data }))
-      .catch((error) => console.log(error));
-  };
-
-  voteCatImage = (score) => {
-    const params = {
-      api_key  : API_KEY,
-      method   : 'POST',
-      mode     : 'no-cors',
-      image_id : this.state.data.url,
-      score
-    };
-    fetch('http://thecatapi.com/api/images/vote', params)
-      .then((data) => this.fetchCatImage())
-      .catch((error) => console.log(error));
-  };
-
-  handleUpvote = () => this.voteCatImage(10);
-
-  handleDownvote= () => this.voteCatImage(1);
 
   render() {
-    const { url } = this.state.data;
+    const { showCounter } = this.state;
     return (
       <div className='app'>
         <div className='app-header'>
           <img src={logo} className='app-logo' alt='logo' />
           <h2>Cat Voting App</h2>
         </div>
-        <div className='cat-container'>
-          <div className='vote-buttons'>
-            <span>See Another?</span>
-            <button className='love-it' onClick={this.handleUpvote}>Love it</button>
-            <button className='hate-it' onClick={this.handleDownvote}>Hate it</button>
-          </div>
-          <div className='cat-image'>
-            <img src={url} height='300'/>
-          </div>
+        <div className="nav">
+          <button onClick={this.handleClick}>
+            { `Go to ${showCounter ? 'Voting' : 'Counter'}` }
+          </button>
         </div>
+        { showCounter ? <Counter /> : <Voting /> }
       </div>
     );
   }
