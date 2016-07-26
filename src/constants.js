@@ -7,3 +7,5 @@ export const FETCH_CAT_DATA_FAILED  = 'FETCH_CAT_DATA_FAILED';
 export const CAT_VOTE_PENDING       = 'CAT_VOTE_PENDING';
 export const CAT_VOTE_FAILED        = 'CAT_VOTE_FAILED';
 export const CAT_VOTE_SUCCESS       = 'CAT_VOTE_SUCCESS'
+export const UPVOTE                 = 'UPVOTE';
+export const DOWNVOTE               = 'DOWNVOTE';
