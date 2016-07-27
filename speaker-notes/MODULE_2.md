@@ -1,5 +1,3 @@
-Module 2 Changes:
-
 src/index.js
 ```
 import 'babel-polyfill';
