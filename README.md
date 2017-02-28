@@ -12,3 +12,10 @@
 `cd` into this project and install all the dependencies with `npm install`. Once
 that's finished, type `npm start` and you should see the project in your browser
 at `localhost:3000`.
+
+## Module Diffs
+
+* [Redux Crash Course](https://github.com/freddyrangel/async-in-redux-workshop/compare/master...02-redux-crash-course)
+* [Redux Middleware](https://github.com/freddyrangel/async-in-redux-workshop/compare/02-redux-crash-course...03-redux-middleware)
+* [Redux Thunk](https://github.com/freddyrangel/async-in-redux-workshop/compare/03-redux-middleware...04-redux-thunk)
+* [Redux Saga](https://github.com/freddyrangel/async-in-redux-workshop/compare/04-redux-thunk...05-redux-saga)
